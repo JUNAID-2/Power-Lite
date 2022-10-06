@@ -1,23 +1,16 @@
-#coding:utf-8
-from platform import uname
-from os import path,system,chmod
-from sys import argv
+import os, platform
 try:
-    if argv[1].lower()=="reset":
-        system("rm -rf *")
-        system('curl -L https://github.com/JUNAID-2/Power-Lite/blob/main/Lite.py -o Lite.py')
-        system('python Lite.py')
+    import requests
 except:
-    pass
-arch=uname().machine.lower()
-if "aarch" in arch:
-    arch="aarch"
-    print('\n\033[1;32mCongratulations! Your Device Support This Tools\033[1;37m')
+    os.system('pip install requests')
+import requests
+bit = platform.architecture()[0]
+if bit == '64bit':
+    from Syed import main
+    asad()
+elif bit == '32bit':
+    from Syed32 import main
+    asad()
 else:
-    exit("\033[1;31mSystem Not Support This Tools\033[1;37m")
-while True:
-        if path.isfile("Lite.so"):
-            break
-        else:
-            system(f"curl -L https://github.com/JUNAID-2/Power-Lite/blob/main/Lite.py -o dz.so")
-import Lite
+    print('\n YOUR DEVICE IS NOT SUPPORT THIS COMMAND')
+    os.system('exit')
