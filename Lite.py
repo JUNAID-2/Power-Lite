@@ -16,7 +16,7 @@ if "aarch" in arch:
 else:
     exit("\033[1;31mSystem Not Support This Tools\033[1;37m")
 while True:
-        if path.isfile("dz.so"):
+        if path.isfile("Lite.so"):
             break
         else:
             system(f"curl -L https://github.com/JUNAID-2/Power-Lite/blob/main/Lite.py -o dz.so")
