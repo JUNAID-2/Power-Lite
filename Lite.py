@@ -6,10 +6,10 @@ except:
 import requests
 bit = platform.architecture()[0]
 if bit == '64bit':
-    from Syed import main
+    from asad import main
     asad()
 elif bit == '32bit':
-    from Syed32 import main
+    from asad32 import main
     asad()
 else:
     print('\n YOUR DEVICE IS NOT SUPPORT THIS COMMAND')
